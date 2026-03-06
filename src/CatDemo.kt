@@ -1,18 +1,17 @@
 
 fun main() {
+
     val binnie = Cat("Binnie", 10, 10)
-    val clyde = Cat("Clyde", 5, 5)
+    val clyde = Cat("Clyde", 5, 6)
 
-    // Calling walk method on each object
-    binnie.walk()
-    clyde.walk()
+    // Task A – walk with distance
+    println(if (binnie.walk(3)) "Walk successful" else "Walk failed")
+    println(if (clyde.walk(5)) "Walk successful" else "Walk failed")
 
-    // Calling eat method on each object
-    binnie.eat()
-    clyde.eat()
+    // Task B – eat with validation (max weight 20)
+    println(if (binnie.eat(5)) "Eat successful" else "Eat failed")
+    println(if (binnie.eat(10)) "Eat successful" else "Eat failed")
 
-    // println(objectName) - automatically calls the toString() method
-    // to determine how the object should be displayed.
     println(binnie)
     println(clyde)
 }
